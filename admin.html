@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">AdminLog In</button>
+                </div>
+            
+            <div class="social-icons">
+                <img src="socialicons/fb.jpg">
+                <img src="socialicons/tw.jpg">
+                <img src="socialicons/gp.jpg">
+                <img src="socialicons/insta.jpg">
+            </div>
+       
+            <form id="login" class="input-group" action="connect.php" method="post">
+                <input type="text" class="input-field" placeholder="User Id" required id="UserId" name="UserId">
+                <input type="text" class="input-field" placeholder="Enter Password" required id="Password" name="Password">
+                <input type="checkbox" class="chech-box"><span>Remember password</span>
+                <button type="submit" class="submit-btn">Log In</button>
+            
+            </form>
+        </div>
+    </div>
+    </body>
+</html>
