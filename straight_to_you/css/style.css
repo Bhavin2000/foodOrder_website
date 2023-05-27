@@ -1,0 +1,411 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Poppins', sans-serif;
+}
+.title-text
+{
+    font-size: 40px;
+    text-align: center;
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav
+{
+    flex: 1;
+    text-align: right;
+    
+}
+nav ul
+{
+    display: inline-block;
+    list-style-type: none;
+    
+}
+nav ul li
+{
+    display: inline-block;
+    margin-right: 20px;
+}
+a
+{
+    text-decoration: none;
+    color: #555;
+}
+p
+{
+    color: #555;
+}
+.col-2 h1
+{
+    font-size: 40px;
+    line-height: 50px;
+    margin: 20px;
+}
+.col-2 p
+{
+    font-size: 40px;
+    line-height: 40px;
+    margin: 20px;
+}
+.btn
+{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+    
+}
+.btn:hover
+{
+    background: #563434;
+}
+
+.container
+{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.slider-frame
+{
+    overflow: hidden;
+    height: 800px;
+    width:1300px;
+    margin-left: 250px;
+    margin-top: 20px;
+}
+/*--------slide annimation---------*/
+.img-container
+{
+    width: 750px;
+    height: 450px;
+    background: url(sliderimg/1.jpg);
+    margin:0px auto;
+    animation: slide 30s infinite;
+    
+}
+
+@keyframes slide
+{
+    9%
+    {
+        background: url(sliderimg/1.jpg);
+    }
+    18%
+    {
+        background: url(sliderimg/2.jpg);
+    }
+    27%
+    {
+        background: url(sliderimg/3.jpg);
+    }
+    36%
+    {
+        background: url(sliderimg/4.jpg);
+    }
+    45%
+    {
+        background: url(sliderimg/5.jpg);
+    }
+    54%
+    {
+        background: url(sliderimg/6.jpg);
+    }
+    63%
+    {
+        background: url(sliderimg/7.jpg);
+    }
+    72%
+    {
+        background: url(sliderimg/8.jpg);
+    }
+    81%
+    {
+        background: url(sliderimg/9.jpg);
+    }
+    90%
+    {
+        background: url(sliderimg/10.jpg);
+    }
+    99%
+    {
+        background: url(sliderimg/11.jpg);
+    }
+    
+}
+.header
+{
+    background: radial-gradient(#fff,#ffd6d6);
+    
+}
+
+/*----------About us-----------*/
+#about
+{
+    padding: 40px;
+    
+}
+.about
+{
+    margin: 30px 0;
+    display: flex;
+}
+.about-icon .fas
+{
+    font-size: 60px;
+    color: #ff8080;
+    margin-right: 20px;
+    
+}
+.about-subtitle
+{
+    text-transform: capitalize;
+    color: #ff8080;
+    font-size: 25px;
+}
+.about-info
+{
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.about-icon:hover .fas,
+.about-subtitle:hover
+{
+    transition: transform 2s ease, color 2s ease;
+    transform: translateY(-10px);
+    color: #cd6100;
+    cursor: pointer;
+}
+@media screen and (min-width:576px)
+{
+    .about-center
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .about
+    {
+        flex: 0 0 calc(50% - 16px);
+    }
+}
+@media screen and (min-width:972px)
+{
+    .about
+    {
+        flex: 0 0 calc(33.3% - 16px);
+    }
+}
+/*----------About us end-----------*/
+
+/*---------start of menusection---*/
+.menu-image
+{
+    min-height: 80vh;
+    background:url(sliderimg/canteen1.jpg)center/cover fixed no-repeat;
+}
+.menu-text
+{
+    min-height: 80vh;
+    align-items: center;
+    background: #ffcccc;
+    columns:#000;
+    padding: 40px 0;
+    
+}
+.menu-text-center
+{
+    width: 90%;
+    margin: 0 auto;
+}
+.menu-text h1
+{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.menu-text p
+{
+    margin: 20px 0;
+    line-height: 2;
+}
+@media screen and (min-width:776px)
+{
+    .menu
+    {
+        display: flex;
+    }
+    .menu-text
+    {
+        flex: 0 0 30%;
+    }
+    .menu-image
+    {
+        flex: 0 0 70%;
+        clip-path:polygon(0 0,100% 0,50% 100%, 0 100%);
+    }
+    .menu
+    {
+        background:#ffcccc;
+    }
+}
+/*---------End of menusection---*/
+
+
+/*------sarting of social icons----*/
+
+#social-icons
+{
+    height: 150px;
+    background: #fff;
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+#social-icons a
+{
+    display: inline-block;
+    padding: 5px; 10px;
+    margin: 0 5px;
+    font-size: 40px;
+    border-radius: 5px;
+    transition: transform 2s ease, color 2s ease
+}
+#social-icons a:hover
+{
+    transform: translateY(-20px);
+}
+.facebook
+{
+    color:#3b5998;
+}
+.twitter
+{
+    color:#38a1f3;
+}
+.instagram
+{
+    color:#e1306c;
+}
+.plus
+{
+    color: #db4a39;
+}
+/*------End of social icons----*/
+
+/*------ Adding menu slider----*/
+
+.slider-box
+{
+    margin: 50px;
+    height: 350px;
+    width: 250px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(187,187,187,0.40);
+}
+.slider-box a
+{
+    text-decoration: none;
+    text-align: center;
+}
+    .img-box
+    {
+        height: 170px;
+    }
+    .img-box img
+{
+    height: auto;
+    max-width: 100%;
+    max-height: 100%
+}
+.time
+{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    color: #f16007;
+}
+.detail
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 13px;
+    line-height: 35px;
+}
+.price
+{
+    color: #ffffff;
+    background-color:#ff555b;
+    line-height: 20px;
+}
+.Add
+{
+    position: absolute;
+    bottom: 0px;
+    height: 45px;
+    background-color: #ff696e;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Add a
+{
+   color: #ffffff; 
+}
+.slider-box:hover
+{
+    box-shadow: 2px 2px 12px rgba(47,47,47,0.40);
+}
+.slider-box:hover .img-box img
+{
+    transform: scale(1.07);
+    transition: all ease 0.3s;
+}
+.Add:hover
+{
+    transform: scale(1.1);
+    background-color: #fe9048;
+    box-shadow: 2px 2px 12px rgba(47,47,47,0.40);
+    transition: all ease 0.1s;
+}
+
+/*---------End of Adding menu slider----*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
