@@ -20,10 +20,11 @@
                 <img src="insta.jpg">
             </div>
        <form id="login" class="input-group">
-            <input type="text" class="input-field" placeholder="User Id" required>
-            <input type="text" class="input-field" placeholder="Enter Password" required>
-            <input type="checkbox" class="chech-box"><span>Remember password</span>
-            <button type="submit" class="submit-btn">Log In</button>
+            <input type="text" class="input-field" placeholder="User Id" id="txtname1" required>
+            <input type="text" class="input-field" placeholder="Enter Password" id="pass1"  required>
+            <input type="checkbox" class="chech-box"><span>Remember password</span><br>
+            <span class="social-icons" id="msg1"></span>
+            <input type="button"  class="submit-btn"  onclick="login1()" value="Log In">
             
         
             
@@ -31,15 +32,19 @@
             
             
         <form  id="register" class="input-group">
-            <input type="text" class="input-field" placeholder="User Id" required>
-            <input type="Email" class="input-field" placeholder="Emai Id" required>
-            <input type="text" class="input-field" placeholder="Enter Password" required>
+            <input type="text" class="input-field" placeholder="User Id" id="txtname12" onkeyup="userfetch()" required>
+            <span id="msg12"></span>
+            <input type="Email" class="input-field" placeholder="Emai Id" id="email" required>
+            <input type="text" class="input-field" placeholder="Enter Password" id="pass12"  required>
+
+            <!-- <meter min="1" max="100" value="0" low="0" high="0" id="grade"></meter>
+            <span id="msg1"></span><br> -->
             <input type="checkbox" class="chech-box"><span>I agree to the terms and conditions</span>
-            <button type="submit" class="submit-btn">Register</button>
+            <button type="submit" class="submit-btn" onclick="register1()" >Register</button>
                  
         </form>
         
-        
+       
     </div>
     </div>
     
@@ -62,7 +67,90 @@
             z.style.left = "0px";
             
         }
+         
         
+        //fetch values from array
+        var users=[{Name:'bhavin', pass:'br123'},
+                      {Name:'john', pass:'br1234'},
+                      {Name:'bha', pass:'br13'},
+                      {Name:'bhav', pass:'b123'}];
+        // submitbtn.disabled = true;
+        function login1(){
+            var username = document.getElementById("txtname1").value;
+            var msg = document.getElementById("msg1");
+            var pass = document.getElementById("pass1").value;
+            var submitbtn = document.getElementById("submitbtn");
+
+                  for (var i=0; i<users.length; i++){
+                    if (username == users[i].Name && pass == users[i].pass ){
+                        // submitbtn.disabled = false;
+                        window.location.replace("file:///C:/Users/bhvnr/CYBERFICTION/ip%202020%20project/Product-slider/index.html");
+                          return;
+                    }
+                    else{
+                        // submitbtn.disabled = true;
+                        msg.innerHTML="<h5><u>Incorrect ID/Password</u> &nbsp &nbsp <u>Please Register</u></h5>";
+                        // alert("incorrect ID/pass");
+                        return;
+                    }
+                  }
+                } 
+                function userfetch(){
+            var username = document.getElementById("txtname12").value;
+            var msg = document.getElementById("msg12");
+            var pass = document.getElementById("pass12").value;
+
+                  for (var i=0; i<users.length; i++){
+                    if (username == users[i].Name){
+                           msg.innerHTML="<h5>username Taken</h5>";
+                          return;
+                    }
+                    else{
+                        msg.innerHTML="<h5>available</h5>";
+                    }
+                  }
+                }
+//push values to object
+            //     function register1(){
+            // var username = document.getElementById("txtname12").value;
+            // var msg = document.getElementById("msg12");
+            // var pass = document.getElementById("pass12").value;
+            // var email = document.getElementById("email").value;
+            // var ob = {"Name":username,"pass":pass,"Email":email};
+            // users.push(ob);
+            // }
+        // function login2(){
+        //     window.location.replace("file:///C:/Users/bhvnr/CYBERFICTION/ip%202020%20project/Product-slider/index.html");
+        // }
+        // password validator for register
+        // function password1(){
+        //     var pwd1 = document.getElementById("txtpwd1").value;
+        //     var msg1 = document.getElementById("msg1");
+        //     var grade = document.getElementById("grade");
+        //         function showgrade(min,max,value,low,high) {
+        //             grade.min = min;
+        //             grade.max = max;
+        //             grade.value = value;
+        //             grade.low = low;
+        //             grade.high = high;  
+        //         }
+        //     var regexp = /(?=*[A-z])\w(4,15)/;
+
+        //     if (pwd.match(regexp)){
+        //         msg.innerHTML = "strong password";
+        //         showgrade(1,100,100,0,0);
+        //     }
+        //     else {
+        //         if (pwd1.length<4){
+        //             msg.innerHTML = "poor password";
+        //             showgrade(1,100,100,60,80);
+        //         }
+        //         else{
+        //             msg.innerHTML = "weak password";
+        //             showgrade(1,100,100,40,80);  
+        //         }
+        //     }
+        // }
     </script>
 </body>
 </html>
