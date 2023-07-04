@@ -2,6 +2,41 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="admin.css">
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+        
+    //     function login1(){
+    //     var Uname = document.getElementById("txtname").value;
+    //     var pwd = document.getElementById("txtpwd").value;
+    //     var msg = document.getElementById("msg");
+    //     var userdetails = {userName:"bhavin" , password:"admin"};
+    //     (uname = userdetails.userName && pwd == userdetails.password)?
+    //     document.write("admin login success login success"): msg.innerHTML="invalid username"
+    // }
+    var users=[{Name:'bhavin', pass:'br123'}];
+    function login1(){
+            var username = document.getElementById("txtname1").value;
+            var msg = document.getElementById("msg1");
+            var pass = document.getElementById("pass1").value;
+            var submitbtn = document.getElementById("submitbtn");
+
+                  for (var i=0; i<users.length; i++){
+                    if (username == users[i].Name && pass == users[i].pass ){
+                        // submitbtn.disabled = false;
+                        window.location.replace("file:///C:/Users/bhvnr/CYBERFICTION/ip%202020%20project/Product-slider/index.html");
+                          return;
+                    }
+                    else{
+                        // submitbtn.disabled = true;
+                        msg.innerHTML="<h5><u>Incorrect ID/Password</u> &nbsp &nbsp <u>Please Register</u></h5>";
+                        // alert("incorrect ID/pass");
+                        return;
+                    }
+                  }
+                } 
+    </script>
 </head>
 <body>
     <div class="hero">
@@ -9,6 +44,8 @@
             <div class="button-box">
                 <div id="btn"></div>
                     <button type="button" class="toggle-btn" onclick="login()">AdminLog In</button>
+                    
+                    <!-- <h2 id="msg"></h2> -->
                 </div>
             
             <div class="social-icons">
@@ -18,11 +55,14 @@
                 <img src="socialicons/insta.jpg">
             </div>
        
-            <form id="login" class="input-group" action="connect.php" method="post">
-                <input type="text" class="input-field" placeholder="User Id" required id="UserId" name="UserId">
-                <input type="text" class="input-field" placeholder="Enter Password" required id="Password" name="Password">
-                <input type="checkbox" class="chech-box"><span>Remember password</span>
-                <button type="submit" class="submit-btn">Log In</button>
+            <form id="login" class="input-group" >
+
+                <input type="text" class="input-field" placeholder="User Id" id="txtname1" required name="UserId">
+                <input type="text" class="input-field" placeholder="Enter Password" id="pass1"  required>
+                <input type="checkbox" class="chech-box"><span>Remember password</span><br>
+                <span class="social-icons" id="msg1"></span>
+                <input type="button"  class="submit-btn"  onclick="login1()" value="Log In">
+                
             
             </form>
         </div>
